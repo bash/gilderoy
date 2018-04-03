@@ -1,0 +1,12 @@
+0.0.0.0:8080
+
+root public
+tls off
+
+rewrite {
+  to {path} {path}.html
+}
+
+errors {
+    404 _404.html
+}

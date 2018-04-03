@@ -1,0 +1,28 @@
+title = "Gilderoy"
+description = "An example website"
+
+[[additional.people]]
+name = "Toby"
+image = "assets://style"
+
+[[additional.people]]
+name = "Gilderoy"
+image = "assets://logo"
+
+[[pages]]
+file = "index"
+
+[[pages]]
+file = "_404"
+title = "Page Not Found"
+
+[[pages]]
+path = "/hello"
+file = "hello"
+title = "Hello"
+
+[assets.style]
+source = "sass/style.scss"
+
+[assets.logo]
+source = "assets/logo.svg"

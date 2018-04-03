@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" title="{{config.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{assets.style}}" />
+  <title>{{title}}</title>
+</head>
+<body>
+  <nav>
+    <a href="/" title="{{config.title}}">
+      <img class="header-logo" src="{{assets.logo}}" alt="Logo of Gilderoy" />
+    </a>
+    <ul>
+      {{#nav}}
+        <li>
+          <a href="{{path}}" title="{{title}}">{{title}}{{#is_active}} *{{/is_active}}</a>
+        </li>
+      {{/nav}}
+    </ul>
+  </nav>
+  <main>
+    {{{content}}}
+  </main>
+  <footer>
+    &copy; {{year}} Ruben Schmidmeister <br />
+
+    <a href="https://github.com/bash/gilderoy/edit/master/example/{{page_file}}">Improve this page</a>
+  </footer>
+</body>
+</html>
