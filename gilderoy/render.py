@@ -4,33 +4,16 @@ import getopt
 import sys
 from os import path
 from datetime import date
-from .constants import *
+from .constants import PAGES_FOLDER, PUBLIC_FOLDER, TEMPLATE_NAME
 
-def transform_config(value, assets):
-    if isinstance(value, list):
-        ret = []
-        for item in value:
-            ret.append(transform_config(item, assets))
-        return ret
-    elif isinstance(value, dict):
-        ret = {}
-        for key, val in value.items():
-            ret[key] = transform_config(val, assets)
-        return ret
-    elif isinstance(value, str) and value[:9] == "assets://":
-        asset_name = value[9:]
-
-        return assets[asset_name]
-    
-    return value
 
 def render(config, assets):
-    with open('template.mustache') as f:
+    with open(TEMPLATE_NAME) as f:
         template = f.read()
 
     additional = {}
     if 'additional' in config:
-        additional = transform_config(config['additional'], assets)
+        additional = config['additional']
 
     for page in config['pages']:
         page_file = path.join(PAGES_FOLDER, page['file'] + '.mustache')
@@ -40,7 +23,7 @@ def render(config, assets):
 
         nav = []
         for nav_page in config['pages']:
-            if 'path' in nav_page:
+            if 'path' in nav_page and 'title' in nav_page:
                 is_active = False
 
                 if 'path' in page:

@@ -1,5 +1,6 @@
 title = "Gilderoy"
 description = "An example website"
+url_prefix = "https:/www.example.com"
 
 [[additional.people]]
 name = "Toby"

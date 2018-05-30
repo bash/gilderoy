@@ -1,9 +1,10 @@
-import toml
+from . import render, render_sitemap, build_assets, get_config, process_config
 
-from . import render, build_assets
 
 def main():
-    with open('config.toml') as f:
-        config = toml.loads(f.read())
+    raw_config = get_config()
+    assets = build_assets(raw_config)
+    config = process_config(raw_config, assets)
 
-    render(config, build_assets(config))
+    render(config, assets)
+    render_sitemap(config)
