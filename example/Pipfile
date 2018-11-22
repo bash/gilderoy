@@ -6,7 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages.gilderoy]
-git = "https://github.com/bash/gilderoy.git@8a56d03f4a6d1f5b77ab9bf524c1acfff6d10f06#egg=gilderoy"
+git = "https://github.com/bash/gilderoy.git"
+ref = "master"
 
 [requires]
 python_version = "3.5"
