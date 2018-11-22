@@ -1,0 +1,25 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "5ce0407497c566424d93f58e53cd5b43fdc847660123fff0d33711c2faaa6e37"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.5"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "gilderoy": {
+            "git": "https://github.com/bash/gilderoy.git",
+            "ref": "8a56d03f4a6d1f5b77ab9bf524c1acfff6d10f06"
+        }
+    },
+    "develop": {}
+}
