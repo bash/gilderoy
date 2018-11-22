@@ -5,12 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 
-[packages]
-setuptools = "~=40.6.2"
-pystache = "~=0.5.4"
-htmlmin = "~=0.1.12"
-sass = "~=2.3"
-toml = "~=0.10.0"
+[packages.gilderoy]
+git = "https://github.com/bash/gilderoy.git@8a56d03f4a6d1f5b77ab9bf524c1acfff6d10f06#egg=gilderoy"
 
 [requires]
 python_version = "3.5"
