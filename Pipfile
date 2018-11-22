@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-setuptools = "*"
-pystache = "*"
-htmlmin = "*"
-sass = "*"
-toml = "*"
+setuptools = "~=40.6.2"
+pystache = "~=0.5.4"
+htmlmin = "~=0.1.12"
+sass = "~=2.3"
+toml = "~=0.10.0"
 
 [requires]
 python_version = "3.5"
