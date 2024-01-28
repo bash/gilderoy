@@ -66,14 +66,6 @@ setup(
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
     url='https://github.com/bash/gilderoy',  # Optional
 
-    # This should be your name or the name of the organization which owns the
-    # project.
-    author='Ruben Schmidmeister',  # Optional
-
-    # This should be a valid email address corresponding to the author listed
-    # above.
-    author_email='ruben.schmidmeister@icloud.com',  # Optional
-
     # Classifiers help users find your project by categorizing it.
     #
     # For a list of valid classifiers, see
